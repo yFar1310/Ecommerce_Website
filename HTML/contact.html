@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebron Store</title>
+    <link rel="stylesheet" href="../STYLES/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../JavaScript/index.js" defer></script>
+    <script src="../JavaScript/translate.js" defer></script>
+    <link rel="stylesheet" href="../STYLES/darkMode.css" >
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="../images/LogoLebron.png" alt="logo" width="100px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.php">Compte</a></li>
+                        <li><a id="darkModeToggle" class="mode-toggle"> <img src="../images/moon.png" alt="Switch to Dark Mode" id="modeIcon" width="40" height="40"></a></li> 
+                           
+                    
+                        <img src="../images/France.png" alt="Français" id="frenchFlag" width="40" height="40" style="cursor: pointer;">
+                        <img src="../images/english.png" alt="Français" id="englishFlag" width="40" height="40" style="cursor: pointer;">
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="../images/cart.png" width="30px" height="30px"></a>
+                <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+
+   <!--Formulaire-->
+<div class="form2-container">
+    <h2>Contactez-nous</h2> <!-- Titre du formulaire -->
+    <form action="../PHP/process-form.php" method="post">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required placeholder="Entrez votre nom...">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Entrez votre message ici..." required></textarea>
+
+        <label for="priority" class="priority-select">Priorité</label>
+        <select id="priority" name="priority" >
+            <option value="1">Pas très important</option>
+            <option value="2">Peu important</option>
+            <option value="3">Important</option>
+            <option value="4">Urgent !!!</option>
+        </select>
+
+        <fieldset class="type-select">
+            <legend>Type</legend>
+
+            <label>
+                <input type="radio" name="type" value="1" checked>
+                Réclamation
+            </label>
+
+            <br>
+
+            <label>
+                <input type="radio" name="type" value="2">
+                Suggestion
+            </label>
+        </fieldset>
+
+        <div class="terms">
+            <label>
+                <input type="checkbox" name="terms">
+                <span>J'accepte les termes et conditions et la politique de confidentialité</span>
+            </label>
+        </div>
+
+        <button class="btn">Envoyer</button>
+    </form>
+</div>
+
+
+  
+   
+
+  
+
+    <!-- Brands -->
+
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="../images/logo-godrej.png">
+                </div>
+                <div class="col-5">
+                    <img src="../images/logo-oppo.png">
+                </div>
+                <div class="col-5">
+                    <img src="../images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="../images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="../images/logo-philips.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="../images/play-store.png">
+                        <img src="../images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../images/LogoLebron.png">
+                    <p>Notre objectif est de rendre durablement accessible au plus grand nombre le plaisir et les bienfaits du sport.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Suivez nous sur les réseaux sociaux</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024</p>
+        </div>
+    </div>
+
+  
+
+</body>
+
+</html>
