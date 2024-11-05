@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../STYLES/darkMode.css" >
     <script src="../JavaScript/index.js" defer></script>
+    <script src="../JavaScript/cart.js" defer></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body>
@@ -37,77 +39,83 @@
         </div>
     </div>
 
-    <!-- Cart items details -->
-    <div class="small-container cart-page">
+<!-- Cart items details -->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="../images/yellowTshirt.png" alt="Yellow Tshirt">
+                    <div>
+                        <p>Tshirt Jaune</p>
+                        <small>Prix: 54.99 €</small>
+                        <br>
+                        <a href="#" class="remove-item">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" min="1" class="quantity" data-price="54.99"></td>
+            <td class="subtotal">54.99 €</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="../images/LEBRON+WITNESS+VIII+IPS.png" alt="LeBron Witness">
+                    <div>
+                        <p>LeBron Witness 8 «I Promise School»</p>
+                        <small>Prix: 599.00 €</small>
+                        <br>
+                        <a href="#" class="remove-item">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" min="1" class="quantity" data-price="599.00"></td>
+            <td class="subtotal">599.00 €</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="../images/Lebron-Hoodie.png" alt="Lebron Hoodie">
+                    <div>
+                        <p>Ensemble Bleu gris</p>
+                        <small>Prix: 300.00 €</small>
+                        <br>
+                        <a href="#" class="remove-item">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1" min="1" class="quantity" data-price="300.00"></td>
+            <td class="subtotal">300.00 €</td>
+        </tr>
+    </table>
+    <div class="total-price">
         <table>
             <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <td>Subtotal</td>
+                <td id="cart-subtotal">0.00 €</td>
             </tr>
             <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="../images/buy-1.jpg">
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
+                <td>Tax</td>
+                <td id="cart-tax">0.00 €</td>
             </tr>
             <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="../images/buy-2.jpg">
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="../images/buy-3.jpg">
-                        <div>
-                            <p>Red Printed T-Shirt</p>
-                            <small>Price: $50.00</small>
-                            <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
+                <td>Total</td>
+                <td id="cart-total">0.00 €</td>
             </tr>
         </table>
-        <div class="total-price">
-            <table>
-                <tr>
-                    <td>Subtotal</td>
-                    <td>$200.00</td>
-                </tr>
-                <tr>
-                    <td>Tax</td>
-                    <td>$35.00</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>$230.00</td>
-                </tr>
-            </table>
-        </div>
     </div>
+</div>
+
+<!-- Méthode de paiement-->
+
+<div class="payment-button">
+    <button id="pay-button">Proceed to Payment</button>
+</div>
 
     <!-- Footer -->
     <div class="footer">

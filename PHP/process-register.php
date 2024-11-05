@@ -30,43 +30,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Passwords must match";
     }
 
-    // If there are errors, display them
+    // If there are errors, display them and redirect to account page
     if (!empty($errors)) {
-        foreach ($errors as $error) {
-            echo htmlspecialchars($error) . "<br>";
-        }
-        exit; // Stop further execution
+        // Use JavaScript alert to display the errors and redirect
+        echo "<script>
+                alert('" . implode("\\n", array_map('htmlspecialchars', $errors)) . "');
+                window.location.href = '../HTML/account.php';
+              </script>";
+        exit;
     }
 
     // Process form data if no errors
-    print_r($_POST); // Handle successful case, e.g., save to database
-
-    $password_hash = password_hash($_POST["password"],PASSWORD_DEFAULT);
-    var_dump($password_hash);
-
+    $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
     $mysqli = require __DIR__ . "/database.php";
 
-    $sql = "INSERT INTO users(NAME,EMAIL,PASSWORD_HASH)
-            VALUES(?,?,?)";
+    $sql = "INSERT INTO users(NAME, EMAIL, PASSWORD_HASH) VALUES (?, ?, ?)";
 
     $stmt = $mysqli->stmt_init();
 
-    if(! $stmt->prepare($sql)){
-        die("SQL error: ".$mysqli->error);
+    if (!$stmt->prepare($sql)) {
+        $error_message = htmlspecialchars("SQL error: " . $mysqli->error, ENT_QUOTES);
+        echo "<script>
+                alert('$error_message');
+                window.location.href = '../HTML/account.php';
+              </script>";
+        exit();
     }
 
-    $stmt->bind_param("sss",$_POST["name"],$_POST["email"],$password_hash);
+    $stmt->bind_param("sss", $_POST["name"], $_POST["email"], $password_hash);
 
-   if( $stmt->execute()){
-    
+    if ($stmt->execute()) {
         header("Location: ../HTML/signup-success.html");
         exit();
-   }
-
-    
+    }
 } else {
     // Handle the case when the form is not submitted
     echo "Form not submitted.";
 }
-    
+?>

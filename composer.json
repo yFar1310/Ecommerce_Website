@@ -1,0 +1,16 @@
+{
+    "name": "yahya/ecommercetest",
+    "autoload": {
+        "psr-4": {
+            "Yahya\\Ecommercetest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yahya"
+        }
+    ],
+    "require": {
+        "stripe/stripe-php": "^16.2"
+    }
+}
