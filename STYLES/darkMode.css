@@ -1,0 +1,190 @@
+/* Dark Mode Styles */
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-mode .navbar{
+    background-color: #1e1e1e; /* Dark navbar */
+}
+
+body.dark-mode a {
+    color: #bb86fc; /* Light link color */
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e; /* Dark container */
+}
+
+body.dark-mode .header {
+    background: radial-gradient(#1e1e1e, #272727); /* Dark gradient for header */
+}
+
+body.dark-mode .btn {
+    background: #bb86fc; /* Button background */
+}
+
+body.dark-mode .btn:hover {
+    background: #3700b3; /* Button hover color */
+}
+
+body.dark-mode p {
+    color: #e0e0e0; /* Light text for paragraphs */
+}
+
+body.dark-mode footer {
+    background: #1e1e1e; /* Dark footer background */
+    color: #a0a0a0; /* Light footer text */
+}
+
+body.dark-mode .footer h3 {
+    color: #fff; /* Light footer headings */
+}
+
+body.dark-mode .testimonial .col-3 {
+    background: #1e1e1e; /* Dark testimonial background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+body.dark-mode .table {
+    background-color: #1e1e1e; /* Dark table background */
+    color: #e0e0e0; /* Light table text */
+}
+
+body.dark-mode th {
+    background: #bb86fc; /* Light table header */
+}
+
+body.dark-mode td a {
+    color: #bb86fc; /* Light link color in tables */
+}
+
+/* Adjust button styles for dark mode */
+body.dark-mode .page-btn span {
+    border: 1px solid #bb86fc; /* Light border for buttons */
+}
+
+body.dark-mode .page-btn span:hover {
+    background: #3700b3; /* Button hover color */
+}
+
+/* Adjust input styles for dark mode */
+body.dark-mode input {
+    background: #333; /* Dark input background */
+    color: #e0e0e0; /* Light input text */
+    border: 1px solid #555; /* Slightly lighter border */
+}
+
+body.dark-mode input:focus {
+    border-color: #bb86fc; /* Highlight input on focus */
+}
+
+/* Adjust select styles for dark mode */
+body.dark-mode select {
+    background: #333; /* Dark select background */
+    color: #e0e0e0; /* Light select text */
+    border: 1px solid #bb86fc; /* Light border */
+}
+
+/* Dark mode for form containers */
+body.dark-mode .form-container {
+    background: #1e1e1e; /* Dark form container background */
+}
+
+/* General adjustments */
+body.dark-mode h1, h2, h3, h4 {
+    color: #ffffff; /* Light headings */
+}
+
+/* Dark Mode Styles for Offer Section */
+body.dark-mode .offer {
+    background-color: #1e1e1e; /* Dark background for offer */
+    background: #1e1e1e;
+}
+body.dark-mode .rating .fa{
+    color: #bb86fc;
+}
+
+body.dark-mode .title::after {
+    content: '';
+    background: #bb86fc;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body.dark-mode .fa.fa-quote-left {
+    font-size: 34px;
+    color: #bb86fc;
+}
+body.dark-mode #offerText {
+    color: #e0e0e0; /* Light text color for offer text */
+}
+
+body.dark-mode #offerTitle {
+    color: #bb86fc; /* Light title color */
+}
+
+body.dark-mode #offerDescription {
+    color: #e0e0e0; /* Light description text */
+}
+
+body.dark-mode .offer-img {
+    filter: brightness(0.8); /* Slightly darken images for dark mode */
+}
+
+body.dark-mode #offerBtn {
+    background: #bb86fc; /* Button background */
+}
+
+body.dark-mode #offerBtn:hover {
+    background: #3700b3; /* Button hover color */
+}
+
+
+.dark-mode .container2 {
+    background-color: #282828; /* Fond sombre pour le conteneur */
+    color: #e0e0e0; /* Texte clair dans le conteneur */
+}
+
+.dark-mode #welcomeMessage {
+    color: #76ff03; /* Couleur verte pour le titre en mode sombre */
+}
+
+.dark-mode #welcomeMessage:hover {
+    color: #aeea00; /* Couleur légèrement plus claire au survol */
+}
+
+.dark-mode #userEmail {
+    color: #b0bec5; /* Couleur du texte plus clair pour le courriel */
+}
+
+.dark-mode #discoverProducts {
+    background-color: #4caf50; /* Couleur du bouton en mode sombre */
+    color: white; /* Couleur du texte du bouton */
+}
+
+.dark-mode #discoverProducts:hover {
+    background-color: #45a049; /* Couleur légèrement plus sombre au survol */
+}
+
+.dark-mode #Indicator {
+    width: 100px;
+    border: none;
+    background: #bb86fc;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 0.5s;
+}
+
+.dark-mode .total-price table {
+    border-top: 3px solid #bb86fc;
+    width: 100%;
+    max-width: 400px;
+}

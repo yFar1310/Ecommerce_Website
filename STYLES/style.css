@@ -1,0 +1,768 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:#ffe3b3;
+    
+}
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    background-color: #7a4b9c;
+    z-index: 1000;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+    text-align: center;
+    justify-content: space-between; 
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+p{
+    color: #1c1c1c;
+}
+.container{
+    max-width: 100%;
+    margin: auto;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    padding-left: 25px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.btn{
+    display: inline-block;
+    background: #FDB927;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #563434;
+}
+.header{
+    background: radial-gradient(circle at center, #ffffff, #ffe3b3, #ffb347);
+
+}
+.header .row{
+    margin-top: 70px;
+}
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.col-3 img{
+    width: 100%;
+    border-radius: 8px;
+    
+}
+.col-3:hover img {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.col-4 img{
+    width: 100%;
+    border-radius: 8px; /* Optional: round the corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Default shadow */
+}
+.col-4:hover {
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: '';
+    background: #FDB927;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #000000;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.rating .fa{
+    color: #FDB927;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+/* Offer */
+.offer{
+    background: radial-gradient(circle at center, #ffffff, #ffe3b3, #ffb347);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.col-2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555;
+}
+
+/* Testimonial */
+.testimonial{
+    margin-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #FDB927;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+/* Brands */
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+/* Footer */
+.footer{
+    background: black;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/* All Products */
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #FDB927;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin: 0 auto 80px;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #FDB927;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background: #FDB927;
+    color: white;
+}
+
+/* Single Product */
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    border: 1px solid #FDB927;
+    margin-right: 10px;
+}
+input:focus{
+    outline: none;
+}
+.single-product .fa{
+    color: #FDB927;
+    margin-left: 10px;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/* Cart Items */
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #FDB927;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #FDB927;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #FDB927;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+/* Account page */
+.account-page{
+
+    background: radial-gradient(circle at center, #ffffff, #ffe3b3, #ffb347);
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    background: #FDB927;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: #FDB927;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 0.5s;
+}
+
+/* Media query for menu */
+@media only screen and (max-width: 800px){
+
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        max-height: 1000px;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display:grid;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Display switch mode and flags in mobile view */
+    .switch-mode, 
+    .flag-icons { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    /* Adjust switch mode button style */
+    .switch-mode {
+        color: white;
+        font-size: 1rem;
+    }
+
+    /* Style flag icons */
+    .flag-icons img {
+        width: 24px;
+        height: 16px;
+        margin-right: 5px;
+    }
+}
+
+/* Media query for 600 screen size */
+@media only screen and (max-width: 600px){
+
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .cart-info p{
+        display: none;
+    }
+    
+}
+
+
+ /* Optional: Add styles for the mode toggle */
+ .mode-toggle {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Ensure image size is appropriate */
+#modeIcon {
+    width: 40px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Welcome I'm James*/
+
+.image-container {
+    position: relative; /* Allow for absolute positioning of the text bubble */
+    display: inline-block; /* Keep container to fit the image */
+    overflow: hidden; /* Hide any overflow from the image */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.image-container img {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Optional: round the corners of the image */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.text-cloud {
+    position: absolute; /* Position absolute to place the bubble */
+    top: 20%; /* Adjust this value to move it vertically */
+    left: 80%; /* Adjust this value to move it horizontally */
+    transform: translate(-50%, -50%); /* Center it based on its width */
+    background: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+    border: 1px solid #FDB927; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding for the bubble */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    z-index: 10; /* Ensure it's above other elements */
+    font-size: 14px; /* Adjust the font size if needed */
+    color: #333; /* Text color for visibility */
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+.image-container:hover .text-cloud {
+    opacity: 1; /* Show the text bubble on hover */
+}
+
+
+
+/* Conteneur du formulaire */
+.form2-container {
+    background: #ffffff; /* Fond blanc pour le formulaire */
+    width: 90%;
+    max-width: 400px; /* Largeur max du formulaire */
+    margin: 50px auto; /* Centre le formulaire sur la page */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    border-radius: 8px; /* Coins arrondis */
+    transition: transform 0.3s ease; /* Transition pour l'animation */
+}
+
+.form2-container:hover {
+    transform: scale(1.02); /* Légère augmentation de taille au hover */
+}
+
+/* Styles du formulaire */
+form {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+}
+
+/* Labels */
+label {
+    margin-bottom: 5px; /* Espacement entre labels et champs */
+    font-weight: bold; /* Gras pour les labels */
+}
+
+/* Champs de saisie */
+input[type="text"],
+textarea,
+select {
+    margin-bottom: 15px; /* Espacement entre les champs */
+    padding: 10px; /* Rembourrage interne */
+    border: 2px solid #cccccc; /* Bordure grise */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 14px; /* Taille de la police */
+    transition: border 0.3s ease; /* Transition pour les bordures */
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #7a4b9c; /* Couleur de bordure au focus */
+    outline: none; /* Supprime le contour par défaut */
+}
+
+/* Style pour le textarea */
+textarea {
+    resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+/* Styles pour le champ de sélection */
+select {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%237a4b9c" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5H5z"/></svg>') no-repeat right 10px center; /* Icône de flèche pour le select */
+    background-size: 10px; /* Taille de l'icône */
+}
+
+/* Style pour les boutons */
+.btn {
+    background: #7a4b9c; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px; /* Rembourrage */
+    border: none; /* Suppression de la bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur main */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transitions pour l'effet au survol */
+}
+
+.btn:hover {
+    background: #563434; /* Couleur au survol */
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+/* Styles pour les cases à cocher et les boutons radio */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px; /* Espacement à droite */
+}
+
+/* Styles pour le champ de sélection du type */
+.type-select {
+    margin-bottom: 15px; /* Espacement entre le champ de sélection et le bouton */
+    font-size: 12px; /* Réduit la taille de la police */
+    padding: 10px; /* Ajoute du rembourrage interne */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+.type-select legend {
+    font-weight: bold; /* Légende en gras */
+    font-size: 14px; /* Taille de police de la légende */
+}
+
+.type-select label {
+    display: block; /* Chaque label sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espacement entre les labels */
+    cursor: pointer; /* Curseur main pour pointer */
+    font-size: 14px;
+}
+
+/* Styles pour les boutons radio */
+.type-select input[type="radio"] {
+    margin-right: 5px; /* Espacement à droite */
+    transform: scale(0.8); /* Réduit la taille des boutons radio */
+}
+
+
+/* Ajout de responsive design */
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%; /* Prend 100% de la largeur sur mobile */
+    }
+}
+
+
+/* Welcome style jolie */
+
+.container2 {
+
+        text-align: center;
+        background-color: #FDB927; /* Fond blanc pour le conteneur */
+        border-radius: 15px; /* Coins arrondis */
+        padding: 50px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre portée */
+        animation: fadeIn 1s ease-in-out; /* Animation de fade in */
+}
+
+#welcomeMessage {
+    font-size: 3.5rem; /* Grande taille de police pour le titre */
+    color: #4CAF50; /* Couleur verte pour le titre */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition pour hover */
+}
+
+#welcomeMessage:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+    color: #388E3C; /* Couleur légèrement plus foncée au survol */
+}
+
+#userEmail {
+    font-size: 2rem; /* Taille de police plus grande pour le texte */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition pour hover */
+}
+
+#userEmail:hover {
+    transform: scale(1.05); /* Légèrement agrandi au survol */
+    color: #555; /* Changement de couleur au survol */
+}
+
+#discoverProducts {
+    background-color: #4CAF50; /* Couleur du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem; /* Taille de police plus grande pour le bouton */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour un effet plus doux */
+}
+
+#discoverProducts:hover {
+    background-color: #45a049; /* Couleur légèrement plus sombre au survol */
+    transform: scale(1.05); /* Agrandissement du bouton au survol */
+}
